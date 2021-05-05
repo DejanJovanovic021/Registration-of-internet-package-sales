@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="CENTER" hgap="5.0" vgap="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SaleController">
+    <children>
+        
+        <Label text="Add details:" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Label>
+        
+        <Label text="First and last name" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label text="Address" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Label text="Speed" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Label text="Flow" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Label text="Contract duration" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        
+        <TextField fx:id="firstLastName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="address" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <ChoiceBox fx:id="speed" value="6" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <ChoiceBox fx:id="flow" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <ChoiceBox fx:id="contractDuration" value="2" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      
+        <Label text="Mbit/s" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+        <Label text="Gb" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+        <Label text="Year" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+        
+        <HBox alignment="TOP_LEFT" spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="7">
+            <children>
+                <Button fx:id="sellBtn" mnemonicParsing="true" onAction="#sell" text="_Sell" />
+                <Button fx:id="clearBtn" mnemonicParsing="true" onAction="#clear" text="_Clear" />
+            </children>
+        </HBox>
+        
+        <ListView fx:id="listView" GridPane.columnIndex="2" GridPane.rowSpan="9" />
+        
+        <HBox alignment="CENTER" fillHeight="false" GridPane.columnIndex="1" GridPane.rowIndex="8">
+            <children>
+                <Button fx:id="deleteBtn" mnemonicParsing="true" onAction="#delete" text="_Delete selected sale" />
+            </children>
+        </HBox>
+    </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</GridPane>

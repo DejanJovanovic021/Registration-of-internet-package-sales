@@ -1,0 +1,15 @@
+.root{
+    
+    -fx-background-color: #9999ff;
+}
+
+.Label{
+    
+    -fx-padding-top: 10px;
+    -fx-padding-bottom: 10px;
+}
+
+#listView{
+    
+    -fx-background-color: #ccccff;
+}
